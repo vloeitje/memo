@@ -1,4 +1,4 @@
-FROM python:3.5  
+FROM python:2.7.18
 # setup environment variable  
 ENV DockerHOME=/home/app/webapp  
 
