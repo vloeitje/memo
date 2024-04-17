@@ -1,4 +1,4 @@
-FROM python:3.4
+FROM python:3.5
 # setup environment variable  
 ENV DockerHOME=/home/app/webapp  
 
@@ -22,4 +22,4 @@ RUN pip install -r requirements.txt
 # port where the Django app runs  
 EXPOSE 8000  
 # start server  
-CMD python manage.py runserver
+CMD ["gunicorn", "--bind", ":8000", "--workers", "3", "mysite.wsgi:application"]
