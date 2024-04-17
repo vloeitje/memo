@@ -1,20 +1,20 @@
 {% load static %}
-  <div class="container">
-    <div class="well header">
-      <h1><a href="/">Daniel</a></h1>
-      <div class="row" style="min-height: 150px;">
-        <div class="col-xs-4 text-center col-xs-offset-4">
-          <h4>We miss someone</h4>
-          <p>add a subtitle</p>
-          <img src="{% static 'images/person.png' %}" class="img-responsive"/>
+<div class="container">
+  <div class="well header" style="background-color: #fafafa; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <div style="display: flex; align-items: center;">
+        <img src="{% static 'images/person.png' %}" alt="Profile Picture" style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px;">
+        <div>
+          <h1 style="margin: 0;"><a href="/" style="text-decoration: none; color: #333;">Daniel</a></h1>
+          <h4 style="margin: 5px 0;">We miss someone</h4>
+          <p style="margin: 5px 0; color: #666;">add a subtitle</p>
         </div>
       </div>
-      <div class="row">
-        <p class="text-center">
-          <br />
-          <a href="{% url 'submit' %}" class="btn btn-primary">Submit Story or Pictures</a>
-        </p>
+      <div>
+        <a href="{% url 'submit' %}" class="btn btn-primary" style="text-decoration: none; color: #fff; background-color: #3897f0; border: none; border-radius: 5px; padding: 8px 20px;">Submit Story or Pictures</a>
       </div>
     </div>
   </div>
+</div>
+
 
